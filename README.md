@@ -2,7 +2,8 @@
 
 ## 📝 Project Overview
 Kompleksowy dashboard analityczny stworzony w Power BI, mający na celu przekształcenie surowych danych transakcyjnych (Superstore Dataset) w czytelne i interaktywne narzędzie dla kadry zarządzającej. Raport skupia się na monitorowaniu kluczowych wskaźników efektywności (KPI), trendów czasowych oraz identyfikacji obszarów generujących straty.
-![Main Dashboard Overview](images/image_0bd7d2.png)
+
+![Main Dashboard Overview](dashboard.jpg)
 ---
 
 ## 🚀 Key Features
