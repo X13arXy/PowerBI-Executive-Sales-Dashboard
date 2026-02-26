@@ -1,43 +1,43 @@
-# 📊 Executive Sales & Profitability Dashboard - Power BI
-
-## 📝 Project Overview
-Kompleksowy dashboard analityczny stworzony w Power BI, mający na celu przekształcenie surowych danych transakcyjnych (Superstore Dataset) w czytelne i interaktywne narzędzie dla kadry zarządzającej. Raport skupia się na monitorowaniu kluczowych wskaźników efektywności (KPI), trendów czasowych oraz identyfikacji obszarów generujących straty.
+📊 Executive Sales & Profitability Dashboard - Power BI
+📝 Project Overview
+A comprehensive analytical dashboard created in Power BI, designed to transform raw transactional data (Superstore Dataset) into a clear and interactive tool for executive management. The report focuses on monitoring key performance indicators (KPIs), temporal trends, and identifying areas generating financial losses.
 
 ![Main Dashboard Overview](dashboard.jpg)
----
 
-## 🚀 Key Features
-* **Dynamiczne KPI:** Śledzenie łącznej sprzedaży, zysku, liczby zamówień oraz średniego czasu realizacji zamówienia.
-* **Analiza Trendów (Sales & Profit over Time):** Wykres kombinowany (słupki + linia) pokazujący korelację między przychodem a zyskiem z płynną, ciągłą osią czasu.
-* **Analiza Rentowności Regionalnej:** Szczegółowa tabela z formatowaniem warunkowym (Heatmap), pozwalająca na natychmiastową lokalizację strat w konkretnych kategoriach i regionach.
-* **Scatter Plot Analysis:** Wizualizacja zależności między wysokością rabatu a marżą zysku, ułatwiająca optymalizację polityki rabatowej.
-* **Analiza Struktury Zysku (Waterfall Chart):** Przedstawienie wkładu poszczególnych kategorii produktów w końcowy wynik finansowy.
+🚀 Key Features
+Dynamic KPIs: Tracking total sales, profit, total number of orders, and average order delivery time.
 
----
+Trend Analysis (Sales & Profit over Time): A combo chart (bar + line) showing the correlation between revenue and profit with a smooth, continuous timeline.
 
-## 🛠 Tech Stack & Solutions
-W trakcie projektu rozwiązałem szereg wyzwań technicznych, które znacząco poprawiły UX i czytelność danych:
+Regional Profitability Analysis: A detailed matrix with conditional formatting (Heatmap), allowing for the instant localization of financial losses across specific categories and regions.
 
-### 1. Optymalizacja Osi Czasu (DAX & Power Query)
-Początkowy widok dzienny był nieczytelny i zawierał paski przewijania. Zastosowałem grupowanie do miesięcy, aby uzyskać płynny trend bez utraty ciągłości osi.
-> **Kod kolumny obliczeniowej:**
-> `Miesiac = STARTOFMONTH('Superstore'[Order Date])`
+Scatter Plot Analysis: Visualization of the relationship between discount rates and profit margins, facilitating the optimization of the company's discount policy.
 
-### 2. Zaawansowane Formatowanie KPI
-Standardowe zaokrąglenia Power BI (np. "10K") były mało precyzyjne dla liczby zamówień. Stworzyłem dedykowaną miarę DAX, wymuszając format liczby całkowitej z separatorem tysięcy.
-> **Formuła miary:**
-> `Number of Orders = COUNT('Superstore'[Order ID])`
+Profit Structure Analysis (Waterfall Chart): Presentation of how individual product categories contribute to the final financial bottom line.
 
----
+🛠 Tech Stack & Solutions
+During the project, I solved several technical challenges that significantly improved UX and data readability:
 
-## 💡 Key Business Insights
-* **Pułapka Rabatów:** Dane wyraźnie pokazują, że rabaty powyżej 20% drastycznie obniżają marżę, rzadko przekładając się na adekwatny wzrost wolumenu.
-* **Problematyczne Kategorie:** Region *Central* wykazuje znaczące straty w kategoriach *Tables* i *Bookcases*, co sugeruje konieczność rewizji łańcucha dostaw lub cen w tym obszarze.
+1. Timeline Optimization (DAX & Power Query)
+The initial daily view was cluttered and required scrollbars. I applied monthly grouping to achieve a smooth trend analysis without losing timeline continuity.
 
----
+Calculated column code:
+Month = STARTOFMONTH('Superstore'[Order Date])
 
-## 📂 How to use
-1. Pobierz plik `.pbix` z głównego folderu repozytorium.
-2. Otwórz projekt w **Power BI Desktop**.
-3. Skorzystaj z panelu filtrów po lewej stronie, aby dynamicznie zmieniać zakres dat, regiony lub segmenty klientów.
+2. Advanced KPI Formatting
+Standard Power BI rounding (e.g., "10K") lacked the necessary precision for the order count. I created a dedicated DAX measure, enforcing a whole number format with a thousand separator for clear visibility.
 
+Measure formula:
+Number of Orders = COUNT('Superstore'[Order ID])
+
+💡 Key Business Insights
+The Discount Trap: The data clearly indicates that discounts above 20% drastically reduce the profit margin, rarely translating into an adequate increase in sales volume.
+
+Problematic Categories: The Central region shows significant losses in the Tables and Bookcases categories, suggesting an urgent need to review the supply chain, vendor contracts, or pricing strategy in this area.
+
+📂 How to use
+Download the .pbix file from the main repository folder.
+
+Open the project in Power BI Desktop.
+
+Use the filter panel on the left to dynamically change date ranges, regions, or customer segments.
